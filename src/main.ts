@@ -24,6 +24,10 @@ const main = async () => {
 
   await bestbuy.open();
 
+  await Promise.all([
+    sendDiscordMessage({ message: `3080 bot started...`}),
+  ]);
+
   logger.info('Starting purchase attempts');
 
   try {
